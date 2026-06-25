@@ -1,0 +1,9 @@
+{
+  "name": "soap-client-node",
+  "version": "1.0.0",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.0",
+    "soap": "^1.1.4",
+    "written-number": "^0.11.3"
+  }
+}

@@ -1,0 +1,28 @@
+# Node
+node_modules/
+npm-debug.log
+
+# .NET
+bin/
+obj/
+*.user
+
+# Rust
+target/
+Cargo.lock
+
+# Java
+*.class
+
+# C++
+cpp/clisoap1
+cpp/clisoap2
+cpp/conintl
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# Misc
+.DS_Store
+*.log
