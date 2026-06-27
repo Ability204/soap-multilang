@@ -33,7 +33,8 @@ app.MapGet("/", async (int n) =>
         $"?client=gtx&sl=en&tl=es&dt=t&q={Uri.EscapeDataString(word)}";
     var json = await http.GetStringAsync(translateUrl);
     var doc = JsonDocument.Parse(json);
-    return doc.RootElement[0][0][0].GetString();
+    var translated = doc.RootElement[0][0][0].GetString() ?? "";
+    return Results.Text(translated, "text/plain", System.Text.Encoding.UTF8);
 });
 
 app.Run("http://localhost:5000");

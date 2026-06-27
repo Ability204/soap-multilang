@@ -13,5 +13,6 @@ http.createServer(async (req, res) => {
   const client = await soap.createClientAsync(wsdl);
   const [result] = await client.NumberToWordsAsync({ ubiNum: n });
   const { text } = await translate(result.NumberToWordsResult, { to: 'es' });
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
   res.end(text);
 }).listen(3000, () => console.log('http://localhost:3000/?n=10'));
